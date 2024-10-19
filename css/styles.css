@@ -12,7 +12,7 @@ position: relative;
 /* Bổ sung các định dạng cho các trang nội dung */
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Nền trắng với độ trong suốt nhẹ */
+    background-color: rgba(255, 255, 255, 0.7); /* Nền trắng với độ trong suốt nhẹ */
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -61,55 +61,7 @@ p {
     100% { opacity: 1; }
 }
 
-/* Định dạng timeline cho trang "Hành trình của chúng ta" */
-.timeline {
-    position: relative;
-    padding: 1rem 0;
-    margin: 2rem 0;
-}
 
-.timeline:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background-color: #ff4081;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.timeline-item {
-    position: relative;
-    width: 40%; /* Giảm kích thước để tránh tràn */
-    padding: 10px 20px;
-    background-color: #ffe6f2;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    z-index: 2;
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0%; /* Đẩy mục lẻ sang trái */
-    transform: translateX(-5%);
-}
-
-.timeline-item:nth-child(even) {
-    left: 55%; /* Đẩy mục chẵn sang phải */
-    transform: translateX(5%);
-}
-
-.timeline-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.timeline-item p {
-    font-size: 1rem;
-    color: #666;
-}
 /* styles.css */
 
 /* Định dạng cho các hộp bí ẩn */

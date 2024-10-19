@@ -1,0 +1,55 @@
+/* Định dạng timeline cho trang "Hành trình của chúng ta" */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 1rem 0;
+    margin: 2rem 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #ff4081;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    width: 45%; /* Đảm bảo các mục không tràn ra ngoài */
+    padding: 10px 20px;
+    background-color: #ffe6f2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    align-self: flex-start; /* Căn trái */
+    transform: translateX(-10%); /* Điều chỉnh khoảng cách từ đường trung tâm */
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end; /* Căn phải */
+    transform: translateX(10%); /* Điều chỉnh khoảng cách từ đường trung tâm */
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #666;
+}

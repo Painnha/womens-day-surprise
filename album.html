@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Album ảnh của chúng ta</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/album.css">
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div class="container">
-        <h1 data-aos="fade-down">Album ảnh của chúng ta</h1>
-        <div class="gallery" data-aos="fade-up">
-            <!-- Thêm các hình ảnh ở đây -->
-            <img src="images/photo1.jpg" alt="Kỷ niệm 1">
-            <img src="images/photo2.jpg" alt="Kỷ niệm 2">
+    <div class="album-container">
+        <h1>Album ảnh của chúng ta</h1>
+        <div class="gallery"></div>
+        <div class="text-container">
+            <div class="text" id="text1">Đoạn văn bản 1</div>
+            <div class="text" id="text2">Đoạn văn bản 2</div>
+            <div class="text" id="text3">Đoạn văn bản 3</div>
         </div>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/album.js"></script>
 </body>
 </html>
