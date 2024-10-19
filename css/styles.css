@@ -1,39 +1,195 @@
 /* styles.css */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffe6f2;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body{
+background-color: #ffe6f2;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
 }
 
+/* Bổ sung các định dạng cho các trang nội dung */
 .container {
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9); /* Nền trắng với độ trong suốt nhẹ */
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    margin: 2rem;
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(10px);
 }
 
 h1 {
     font-size: 2.5rem;
     color: #ff4081;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
 }
 
 .button {
     display: inline-block;
-    margin-top: 1rem;
     padding: 10px 20px;
     background-color: #ff4081;
     color: white;
     text-decoration: none;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
     background-color: #e91e63;
+}
+
+/* Thêm hiệu ứng mờ dần cho mỗi trang */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Định dạng timeline cho trang "Hành trình của chúng ta" */
+.timeline {
+    position: relative;
+    padding: 1rem 0;
+    margin: 2rem 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #ff4081;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    width: 40%; /* Giảm kích thước để tránh tràn */
+    padding: 10px 20px;
+    background-color: #ffe6f2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0%; /* Đẩy mục lẻ sang trái */
+    transform: translateX(-5%);
+}
+
+.timeline-item:nth-child(even) {
+    left: 55%; /* Đẩy mục chẵn sang phải */
+    transform: translateX(5%);
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #666;
+}
+/* styles.css */
+
+/* Định dạng cho các hộp bí ẩn */
+/* Định dạng cho các hộp bí ẩn */
+.love-box {
+    background-color: #ffe6f2;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.love-box h3 {
+    font-size: 1.5rem;
+    color: #ff4081;
+}
+
+.love-box:hover {
+    background-color: #ffccda;
+}
+
+/* Ẩn nội dung lúc đầu */
+.love-description {
+    display: none;
+    font-size: 1rem;
+    color: #666;
+    margin-top: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Khi hộp được click vào và kích hoạt */
+.love-box.active h3 {
+    display: none; /* Ẩn tiêu đề khi click */
+}
+
+.love-box.active .love-description {
+    display: block;
+    opacity: 1; /* Hiển thị nội dung khi click */
+}
+
+/* Thêm vào cuối file */
+
+/* Hiệu ứng trái tim nhảy */
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+}
+
+.heart-icon {
+  display: inline-block;
+  color: #ff4081;
+  animation: heartBeat 1.3s ease infinite;
+}
+
+/* Container cho particles */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #ffe6f2; /* Màu nền hồng */
+}
+
+/* Đảm bảo tất cả nội dung trong container đều hiển thị trên particles */
+.container * {
+    position: relative;
+    z-index: 3;
+}
+
+/* Thêm hiệu ứng hover cho các phần tử tương tác */
+.button:hover, .love-box:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
