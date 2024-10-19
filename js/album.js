@@ -1,11 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     const imagePaths = [
-        'images/01.jpg',
-        'images/01.jpg',
-        'images/01.jpg',
-        'images/01.jpg',
-        'images/01.jpg',
-        'images/01.jpg',
+        'images/01.JPG',
+        'images/02.JPG',
+        'images/03.JPG',
+        'images/04.JPG',
+        'images/05.JPG',
+        'images/07.JPG',
+        'images/08.JPG',
+        'images/09.JPG',
+        'images/10.JPG',
+        'images/11.JPG',
+        'images/12.JPG',
+        'images/13.JPG',
+        'images/14.JPG',
+        'images/15.JPG',
     ];
 
     const gallery = document.querySelector('.gallery');
@@ -18,14 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const imgElement = document.createElement('img');
         imgElement.src = path;
-        imgElement.alt = `Kỷ niệm ${index + 1}`;
+
         
         const captionDiv = document.createElement('div');
         captionDiv.classList.add('caption');
-        captionDiv.textContent = `Kỷ niệm ${index + 1}`;
+       
         
         photoDiv.appendChild(imgElement);
-        photoDiv.appendChild(captionDiv);
+
         gallery.appendChild(photoDiv);
     });
 
