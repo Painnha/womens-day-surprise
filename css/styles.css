@@ -7,6 +7,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 position: relative;
+font-family: 'Roboto', sans-serif;
+
 }
 
 /* Bổ sung các định dạng cho các trang nội dung */
@@ -28,6 +30,8 @@ h1 {
     font-size: 2.5rem;
     color: #ff4081;
     margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 p {
@@ -94,6 +98,7 @@ p {
     margin-top: 1rem;
     opacity: 0;
     transition: opacity 0.5s ease;
+  
 }
 
 /* Khi hộp được click vào và kích hoạt */
@@ -102,8 +107,10 @@ p {
 }
 
 .love-box.active .love-description {
-    display: block;
+ 
     opacity: 1; /* Hiển thị nội dung khi click */
+    display: flex;
+    flex-direction: row; /* Đảm bảo nội dung được sắp xếp theo chiều ngang */
 }
 
 /* Thêm vào cuối file */

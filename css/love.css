@@ -1,0 +1,7 @@
+.love-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Làm tròn góc hình ảnh */
+    object-fit: cover; /* Đảm bảo hình ảnh luôn đầy đủ khung */
+    margin-bottom: 10px;
+}

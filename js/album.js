@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const centerY = container.clientHeight / 2 - 75; // 75 is half of photo height
             photo.style.transform = `translate(${centerX - x}px, ${centerY - y}px) scale(0)`;
             photo.style.opacity = '0';
-        }, index * 300);
+        }, index * 200); // Giảm thời gian chờ xuống 200ms để các hình ảnh di chuyển nhanh hơn
     });
 
     // Show text after all photos have been animated
@@ -71,10 +71,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentTextIndex < texts.length) {
                 texts[currentTextIndex].style.opacity = 1; // Show current text
                 currentTextIndex++;
-                setTimeout(showNextText, 3000); // Show next text after 3 seconds
+                setTimeout(showNextText, 4000); // Tăng thời gian chờ lên 3000ms để các văn bản xuất hiện chậm hơn
+            } else {
+                // Sau khi tất cả các văn bản đã được hiển thị, điều hướng đến flower.html
+                window.location.href = 'flower.html';
             }
         }
 
         showNextText();
-    }, photos.length * 300 + 1000); // Start text animation after all photos are done
+    }, photos.length * 200 + 1000); // Giảm thời gian chờ xuống 200ms để các hình ảnh di chuyển nhanh hơn
 });

@@ -22,7 +22,7 @@
 
 .timeline-item {
     position: relative;
-    width: 45%; /* Đảm bảo các mục không tràn ra ngoài */
+    width: 60%; /* Đảm bảo các mục không tràn ra ngoài */
     padding: 10px 20px;
     background-color: #ffe6f2;
     border-radius: 8px;
